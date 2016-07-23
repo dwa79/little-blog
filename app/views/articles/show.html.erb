@@ -22,6 +22,9 @@
         <% end %>
         <%= link_to 'View all articles', articles_path, class: "btn btn-xs btn-success" %>
     </div>
+    
+    <hr>
+    
     <div id="comments">
         <h2><%= @article.comments.count %> Comments</h2>
         <%= render @article.comments %>

@@ -1,10 +1,22 @@
+<script>
+  
+  label{
+  width: 4em;
+  float: left;
+  text-align: right;
+  margin-right: 0.5em;
+  display: block
+}
+</script>
+
+
 <div class='row'>
   <div class='col-xs-12'>
 
     <%= form_for([@article, @article.comments.build], :html => {class: "form-horizontal", role:"form"}) do |f| %>
       <div class="form-group">
-          <div class="control-label col-lg-1">
-              <%= f.label :commenter %>
+          <div class="control-label col-sm-2">
+              <%= f.label :commenter, "Comment Title:"%>
           </div>
           <div class="col-sm-8">
               <%= f.text_field :commenter, class: "form-control form-control-orange", placeholder: "Your comment title" %>
@@ -14,8 +26,8 @@
       </div>
       
       <div class="form-group">
-          <div class="control-label col-lg-1">
-             <%= f.label :body %>
+          <div class="control-label col-sm-2">
+             <%= f.label :body, "What do you want to say:" %>
           </div>
           <div class="col-sm-8">
               <%= f.text_area :body, class: "form-control form-control-orange", placeholder: "Comment" %>
